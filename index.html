@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>OTP Verification</title>
+</head>
+<body>
+
+<div id="OTPcontainer">
+        <img class="illustrate" src="/illustrate.jpg"/>
+    <h2>
+        OTP Verification
+    </h2>
+    <div class="Textbox">
+        <div class="inputbox"> 
+            <label for="phone">Ph :</label>
+            <input type="number" id="phonenumber" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" placeholder="+91" maxlength="10" required>            
+        </div>
+        <div id="recaptcha_Container"></div>
+
+        <div class="submitbtn">
+            <button onclick="Send_otp()">Send OTP</button>
+        </div>
+      
+    </div>
+</div>
+
+<div id="Verifycontainer">
+    <img class="illustrate" src="/illustrate.jpg"/>
+<h2>
+    OTP Verification
+</h2>
+<div class="Textbox">
+    <div class="inputbox"> 
+        <label for="verifyotp">Enter OTP</label>
+        <input type="tel" id="verifyotp" name="verifyotp"required>            
+    </div>
+    <div class="submitbtn">
+        <button onclick="Veirfy()">Verify OTP</button>
+    </div>
+  
+</div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<!-- <script src="https://www.gstatic.com/firebasejs/9.12.1/firebase-auth-compat.js"></script> -->
+<script src="script.js"></script>
+</body>
+</html>
