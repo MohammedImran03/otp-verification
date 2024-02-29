@@ -1,7 +1,7 @@
 window.onload=function(){
     render()
 }
-document.getElementById("Verifycontainer").style.display='none';
+// document.getElementById("Verifycontainer").style.display='none';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
@@ -34,7 +34,7 @@ function Send_otp(){
         firebase.auth().signInWithPhoneNumber(number, window.recaptchaverifier).then(function (confirmResult) {
             window.confirmResult = confirmResult;
             coderesult = confirmResult;
-            document.getElementById("Verifycontainer").style.visibility='visible';
+            document.getElementById("Verifycontainer").style.display="flex";
             document.getElementById("OTPcontainer").style.display='none';
             console.log(coderesult);
             console.log('OTP Sent');
@@ -49,11 +49,12 @@ function Send_otp(){
 function Veirfy(){
     var otp=document.getElementById("verifyotp").value;
     coderesult.confirm(otp).then(function () {
+        // document.getElementById("Verifycontainer").value="";
         alert('OTP Verified');
-        console.log('OTP Verified');
+        // console.log('OTP Verified');
     }).catch(function () {
         alert('OTP Not correct');
-        console.log('OTP Not correct');
+        // console.log('OTP Not correct');
     })
     
 
