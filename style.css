@@ -1,6 +1,6 @@
 body{
-    /* background-color: aliceblue;
-    padding: 5px; */
+    background-color: aliceblue;
+    /* padding: 5px; */
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -21,6 +21,28 @@ body{
     align-items: center;
 }
 #Verifycontainer{
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 3px;
+    box-shadow: 2px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+}
+#Successcontainer{
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 3px;
+    box-shadow: 2px;
+    padding: 5px;
+    display: none;
+    flex-direction: column;
+    /* height: 100vh; */
+    justify-content: center;
+    align-items: center;
+}
+#Failedcontainer{
     border: 1px solid rgb(190, 190, 190);
     border-radius: 3px;
     box-shadow: 2px;

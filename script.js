@@ -49,11 +49,19 @@ function Send_otp(){
 function Veirfy(){
     var otp=document.getElementById("verifyotp").value;
     coderesult.confirm(otp).then(function () {
+        document.getElementById("Successcontainer").style.display="flex";
+        document.getElementById("Verifycontainer").style.display="none";
+        document.getElementById("OTPcontainer").style.display='none';
         // document.getElementById("Verifycontainer").value="";
-        alert('OTP Verified');
+        // alert('OTP Verified');
         // console.log('OTP Verified');
     }).catch(function () {
-        alert('OTP Not correct');
+        
+        document.getElementById("Failedcontainer").style.display="flex";
+        document.getElementById("Successcontainer").style.display="none";
+        document.getElementById("Verifycontainer").style.display="none";
+        document.getElementById("OTPcontainer").style.display='none';
+        // alert('OTP Not correct');
         // console.log('OTP Not correct');
     })
     
